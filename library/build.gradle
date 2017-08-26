@@ -6,7 +6,7 @@ repositories {
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    buildToolsVersion '25.0.0'
 
     defaultConfig {
         minSdkVersion 9
@@ -14,12 +14,9 @@ android {
     }
 }
 
-configurations {
-    javadocDeps
-}
 dependencies {
     compile 'com.android.support:appcompat-v7:23.1.1'
-    javadocDeps 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }
 
 apply from: 'gradle-mvn-push.gradle'
