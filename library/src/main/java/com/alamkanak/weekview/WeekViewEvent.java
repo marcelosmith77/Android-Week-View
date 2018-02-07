@@ -21,6 +21,7 @@ public class WeekViewEvent {
     private int mColor;
     private boolean mAllDay;
     private Shader mShader;
+    private String key;
 
     public WeekViewEvent(){
 
@@ -182,6 +183,14 @@ public class WeekViewEvent {
         this.mId = id;
     }
 
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -244,4 +253,5 @@ public class WeekViewEvent {
 
         return events;
     }
+
 }
