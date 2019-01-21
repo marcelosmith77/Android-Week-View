@@ -1151,6 +1151,13 @@ public class WeekView extends View {
         int availableWidth = (int) (rect.right - originalLeft - mEventPadding * 2);
 
         // Get text dimensions.
+
+        if (event.getTextColor() != 0) {
+            mEventTextPaint.setColor(event.getTextColor());
+        } else {
+            mEventTextPaint.setColor(mEventTextColor);
+        }
+
         StaticLayout textLayout = new StaticLayout(bob, mEventTextPaint, availableWidth, Layout.Alignment.ALIGN_NORMAL, 1.0f, 0.0f, false);
         if(textLayout.getLineCount() > 0) {
             int lineHeight = textLayout.getHeight() / textLayout.getLineCount();

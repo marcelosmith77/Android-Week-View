@@ -19,6 +19,7 @@ public class WeekViewEvent {
     private String mName;
     private String mLocation;
     private int mColor;
+    private int mTextColor;
     private boolean mAllDay;
     private Shader mShader;
     private String key;
@@ -149,6 +150,14 @@ public class WeekViewEvent {
 
     public void setLocation(String location) {
         this.mLocation = location;
+    }
+
+    public int getTextColor() {
+        return mTextColor;
+    }
+
+    public void setTextColor(int color) {
+        this.mTextColor = color;
     }
 
     public int getColor() {
